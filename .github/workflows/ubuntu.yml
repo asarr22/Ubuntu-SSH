@@ -18,6 +18,19 @@ jobs:
     - uses: actions/checkout@v2
     - run: source ubuntu-run.sh
 
+    - name: Setup ZSH
+      continue-on-error: true
+    - run: |
+        sudo apt install zsh
+        sudo chsh -s $(which zsh) runner
+        cd /home/runner
+        rm .zshrc
+        wget https://raw.githubusercontent.com/Batu33TR/Ubuntu-SSH/main/.zshrc
+        sudo chmod 755 /usr/share/zsh
+        sudo chmod 755 /usr/share/zsh/*
+        sudo chmod 755 /usr/share/zsh/*/*
+        sudo chmod 755 /usr/share/zsh/*/*/*
+ 
     - name: Start SSH via ngrok
       continue-on-error: true
       timeout-minutes: 350
