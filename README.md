@@ -6,6 +6,20 @@ This script helps you get a Virtual Ubuntu server using SSH !!
 
 This works with GitHub actions, thank GitHub not me : )
 
+
+### How to set NGROK ###
+
+1. Login to https://dashboard.ngrok.com
+
+2. Go to https://dashboard.ngrok.com/get-started/your-authtoken
+
+3. Go to repository settings and open secrets 
+
+4. Create new secret, set name to ***NGROK_TOKEN*** and set value to ***your NGROK authtoken***
+
+5. Create new secret too, set name to ***SSH_PASSWORD*** and set value to your password
+
+
 ### How to use ###
 
 Here are some useful notes to using this tool brewed with black magic xD !
@@ -17,6 +31,8 @@ Here are some useful notes to using this tool brewed with black magic xD !
 3. Go to Actions tab again, Click and run workflow manually
 
 4. After few mins the script will spam *SSH* in Terminal , Enjoy !
+
+5. Also you can found SSH IP in https://dashboard.ngrok.com/endpoints/status
 
 
 #### Credits and Thanks to People Who Helped me ####
