@@ -20,7 +20,7 @@ jobs:
 
     - name: Setup ZSH
       continue-on-error: true
-    - run: |
+      run: |
         sudo apt install zsh
         sudo chsh -s $(which zsh) runner
         cd /home/runner
