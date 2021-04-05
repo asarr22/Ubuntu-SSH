@@ -33,7 +33,7 @@ jobs:
       run: |
       cd /home/runner
       git clone https://github.com/Batu33TR/gnupg dont_forget_to_import_this
-      if [ -r ~/.bash_profile ]; then echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile; else echo 'export GPG_TTY=$(tty)' >> ~/.profile; fi
+      echo "export GPG_TTY=$(tty)" >> ~/.bash_profile
       # :D
 
     - name: Start SSH via ngrok
