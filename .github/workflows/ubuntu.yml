@@ -28,7 +28,7 @@ jobs:
         sudo chmod 755 /usr/share/zsh/*
         sudo chmod 755 /usr/share/zsh/*/*
         sudo chmod 755 /usr/share/zsh/*/*/*
-        cat << EOF > ~/.zshrc
+        su -c cat << EOF > /home/runner/.zshrc
         # Set up the prompt
 
         autoload -Uz promptinit
