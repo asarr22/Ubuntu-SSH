@@ -21,18 +21,19 @@ jobs:
     # Some special configs for me :D
     - name: Set GitHub configs
       run: |
-      git config --global user.email "batuhanarslanoglu4@gmail.com"
-      git config --global user.name "Batu33TR"
-      git config --global credential.helper store
-      echo "https://Batu33TR:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
-      git config --global user.signingkey C27A74EFA188FCDE
-      git config --global commit.gpgsign true
+        git config --global user.name "Batu33TR"
+        git config --global user.email "batuhanarslanoglu4@gmail.com"
+        git config --global color.ui true
+        git config --global credential.helper store
+        echo "https://Batu33TR:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+        git config --global user.signingkey C27A74EFA188FCDE
+        git config --global commit.gpgsign true
 
     - name: Configure GPG RSA key
       run: |
-      cd /home/runner
-      git clone https://github.com/Batu33TR/gnupg dont_forget_to_import_this
-      echo "export GPG_TTY=$(tty)" >> ~/.bash_profile
+        cd /home/runner
+        git clone https://github.com/Batu33TR/gnupg dont_forget_to_import_this
+        echo "export GPG_TTY=$(tty)" >> ~/.bash_profile
       # :D
 
     - name: Start SSH via ngrok
