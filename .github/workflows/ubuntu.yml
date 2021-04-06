@@ -33,7 +33,9 @@ jobs:
       run: |
         brew install gpg gpg2 pinentry
         cd /home/runner
-        git clone https://github.com/Batu33TR/gnupg dont_forget_to_import_this
+        git clone https://github.com/Batu33TR/gnupg gpgkey
+        gpg --import ~/gpgkey/gpgsecret.asc
+        rm -rf ~/gpgkey
         echo "export GPG_TTY=$(tty)" >> ~/.bash_profile
       # :D
 
