@@ -31,6 +31,7 @@ jobs:
 
     - name: Configure GPG RSA key
       run: |
+        brew install gpg gpg2 pinentry
         cd /home/runner
         git clone https://github.com/Batu33TR/gnupg dont_forget_to_import_this
         echo "export GPG_TTY=$(tty)" >> ~/.bash_profile
