@@ -39,6 +39,9 @@ jobs:
         echo "export GPG_TTY=$(tty)" >> ~/.bash_profile
       # :D
 
+    - name: Enable byobu
+      run: byobu-enable
+
     - name: Start SSH via ngrok
       continue-on-error: true
       timeout-minutes: 350
