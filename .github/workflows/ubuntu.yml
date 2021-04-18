@@ -26,7 +26,7 @@ jobs:
         git config --global color.ui true
         git config --global credential.helper store
         echo "https://Batu33TR:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
-        git config --global user.signingkey 9C0632EDCCC07A70
+        git config --global user.signingkey 2D00C8AB669FBB8F
         git config --global commit.gpgsign true
 
     - name: Configure GPG RSA key
