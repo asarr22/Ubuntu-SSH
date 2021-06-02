@@ -41,14 +41,14 @@ jobs:
       run: |
         sudo apt install expect
         cd /home/runner
-        cp ~/gpgkey/id_ed25519* .ssh/
-        chmod 400 ~/.ssh/id_ed25519*
+        cp /home/runner/gpgkey/id_ed25519* .ssh/
+        chmod 400 /home/runner/.ssh/id_ed25519*
         
     - name: Add in SSH-Agent
       run: |
         eval $(ssh-agent -s)
         expect << EOF
-          spawn ssh-add ~/.ssh/id_ed25519
+          spawn ssh-add /home/runner/.ssh/id_ed25519
           expect "Enter passphrase"
           send "${{ secrets.SSH_KEY_PASS }}"
           send "\r"
