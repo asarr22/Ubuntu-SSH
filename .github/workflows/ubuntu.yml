@@ -45,6 +45,7 @@ jobs:
         chmod 400 .ssh/id_ed25519*
         
     - name: Add in SSH-Agent
+      run: |
         eval $(ssh-agent -s)
         expect << EOF
           spawn ssh-add .ssh/id_ed25519
