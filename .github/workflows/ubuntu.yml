@@ -41,7 +41,7 @@ jobs:
       run: |
         sudo apt install expect
         cd /home/runner
-        cp ~/gnupg/id_ed25519* .ssh/
+        cp ~/gpgkey/id_ed25519* .ssh/
         chmod 400 ~/.ssh/id_ed25519*
         
     - name: Add in SSH-Agent
