@@ -1,4 +1,8 @@
+# Credit: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows
+
 cat << EOF >> /home/runner/.bashrc
+
+eval $(ssh-agent -s)
 
 env=~/.ssh/agent.env
 
