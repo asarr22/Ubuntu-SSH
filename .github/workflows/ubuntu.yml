@@ -21,8 +21,8 @@ jobs:
     # Some special configs for me :D
     - name: Set GitHub configs
       run: |
-        git config --global user.name "Batu33TR"
-        git config --global user.email "batuhanarslanoglu4@gmail.com"
+        git config --global user.name "asarr22"
+        git config --global user.email "msarr3334@gmail.com"
         git config --global color.ui true
         git config --global credential.helper store
         echo "https://Batu33TR:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
